@@ -1,0 +1,52 @@
+{
+  "name": "modelprompter",
+  "version": "0.0.1",
+  "description": "A prompt manager for browser agents",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --watch src --watch manifest.json --watch sandbox.html --watch vite.config.js --ext js,json,vue,css --exec vite build",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/modelprompters/modelprompter.git"
+  },
+  "keywords": [
+    "llms",
+    "chatbots",
+    "ai",
+    "agents",
+    "prompts",
+    "userscripts"
+  ],
+  "author": "Modelprompter <modelprompter@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/modelprompters/modelprompter/issues"
+  },
+  "homepage": "https://github.com/modelprompters/modelprompter#readme",
+  "dependencies": {
+    "@crxjs/vite-plugin": "^1.0.14",
+    "@vueuse/core": "^10.2.1",
+    "98.css": "^0.1.20",
+    "dompurify": "^3.0.6",
+    "hotkeys-js": "^3.13.0",
+    "lodash-es": "^4.17.21",
+    "markdown-it": "^13.0.2",
+    "markdown-it-attrs": "^4.1.6",
+    "monaco-editor": "^0.45.0",
+    "monaco-editor-vue3": "^0.1.10",
+    "openai": "^4.20.0",
+    "pinia": "^2.1.7",
+    "shell-quote": "^1.8.1",
+    "vue": "^3.2.25"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.3.0",
+    "nodemon": "^3.0.1",
+    "pug": "^3.0.2",
+    "vite": "^2.9.0",
+    "vite-plugin-pug": "^0.3.2"
+  }
+}

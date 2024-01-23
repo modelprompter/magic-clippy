@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+<!-- content-security-policy -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline' 'unsafe-eval'; media-src *; img-src * data: content:;">
+</head>
+<body>
+<script>
+// Event listenter for to eval code from parent
+window.addEventListener('message', async (ev) => {
+  // message status type is "runcode"
+  switch (ev.data.type) {
+    case 'evalCode':
+      const result = await eval(`(()=> {
+;${ev.data.code};
+})()`)
+      ev.srcElement.postMessage(result, '*')
+    break
+  }
+})
+</script>
+</body>
